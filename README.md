@@ -34,7 +34,7 @@ $ git config --global user.name "Nombre"
 $ git config --global user.email correo@gmail.com
 $ git config --list
 ```
-
+**Crear un repositorio en GitHub llamado practica-devops**
 # Planeación y ejecución del flujo de trabajo
 
 Se requiere llevar un control del código fuente con el modelo de gitflow, para lo cual se plantea la siguiente estructura inicial de branching:
@@ -44,7 +44,7 @@ Se requiere llevar un control del código fuente con el modelo de gitflow, para 
         - feature/body
         - feature/footer
 
-#### Clonar repositorio
+#### Clonar repositorio practica-devops
 ```sh
 $ git clone url_repo
 ```
@@ -58,11 +58,27 @@ $ git push --tags
 $ git checkout -b develop
 $ git push origin develop
 ```
-#### Crear ramas feature
+#### Crear rama feature/body
 ```sh
 $ git checkout -b feature/body
-$ git push origin feature/body
+```
+Agregar el contenido del archivo de texto **feature-body.txt** al archivo **index.html** debajo del **header** del html
+#### Commit y subir cambios a feature/body
+```sh
+$ git add .
+$ git commit -m "Corrección de nombre"
+$ git push origin bugfix/nombre-sitio
+```
+
+#### Crear rama feature/footer
+```sh
 $ git checkout -b feature/footer
+```
+Agregar el contenido del archivo de texto del **feature-footer.txt** al archivo **index.html** debajo del **body** del html
+#### Commit y subir cambios a feature/footer
+```sh
+$ git add .
+$ git commit -m "Corrección de nombre"
 $ git push origin feature/footer
 ```
 ------
@@ -105,6 +121,22 @@ El equipo de pruebas encuentra un error en el ambiente de QA y debe cambiar el n
 $ git checkout release/mvp
 $ git checkout -b bugfix/nombre-sitio
 ```
+#### Corregir bug
+Modificar el título en la siguiente sección del archivo index.html por **DevOps Professional**
+```
+<header>
+  <h2>Versionamiento de código con GitHub</h2>
+</header>
+```
+
+#### Commit y subir cambios
+
+```sh
+$ git add .
+$ git commit -m "Corrección de nombre"
+$ git push origin bugfix/nombre-sitio
+```
+
 #### Integrar a develop
 ```sh
 $ git checkout develop
