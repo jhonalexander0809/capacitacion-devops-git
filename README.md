@@ -173,8 +173,6 @@ Finalmente se cumple el flujo completo y se tiene productivo el desarrollo de lo
 
 * **John Alexander Cruz** - *Versión Inicial* - [jhonalexander0809](https://github.com/jhonalexander0809)
 
-# DevOps Professional 🚀
-
 
    [visual studio code]: <https://code.visualstudio.com>
    [git]: <https://git-scm.com>
