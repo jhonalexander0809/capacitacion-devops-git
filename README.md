@@ -48,14 +48,6 @@ Se requiere llevar un control del código fuente con el modelo de gitflow, para 
 ```sh
 git clone url_repo
 ```
-Copiar archivo **index.html** en la carpeta del repositorio.
-
-#### Realizar commit y subir cambios
-```sh
-git add .
-git commit -m "Línea base"
-git push
-```
 #### Crear tag
 ```sh
 git tag v0.1
@@ -74,8 +66,8 @@ Agregar el contenido del archivo de texto **feature-body.txt** al archivo **inde
 #### Commit y subir cambios a feature/body
 ```sh
 git add .
-git commit -m "Corrección de nombre"
-git push origin bugfix/nombre-sitio
+git commit -m "Desarrollo terminado de body"
+git push origin feature/body
 ```
 
 #### Crear rama feature/footer
@@ -86,7 +78,7 @@ Agregar el contenido del archivo de texto del **feature-footer.txt** al archivo 
 #### Commit y subir cambios a feature/footer
 ```sh
 git add .
-git commit -m "Corrección de nombre"
+git commit -m "Desarrollo terminado de footer"
 git push origin feature/footer
 ```
 ------
