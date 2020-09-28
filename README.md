@@ -48,6 +48,14 @@ Se requiere llevar un control del código fuente con el modelo de gitflow, para 
 ```sh
 git clone url_repo
 ```
+Copiar archivo **index.html** en la carpeta del repositorio.
+
+#### Realizar commit y subir cambios
+```sh
+git add .
+git commit -m "Línea base"
+git push
+```
 #### Crear tag
 ```sh
 git tag v0.1
@@ -167,7 +175,7 @@ git push --tags
 
 Finalmente se cumple el flujo completo y se tiene productivo el desarrollo de los requisitos para el MVP.
 
-> NOTA: Para proyectos empresariales, se establecen políticas y restricciones para evitar la integración directa por linea de comandos a la rama master, ya que como buena práctica se requiere integrar por medio de un pull request para revisar y aprobar los cambios.
+> NOTA: Para proyectos empresariales, se establecen políticas y restricciones para evitar la integración directa por linea de comandos a la rama master, ya que como buena practica se requiere integrar por medio de un pull request para revisar y aprobar los cambios.
 
 **DevOps Professional**
 
