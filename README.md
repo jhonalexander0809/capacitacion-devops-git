@@ -167,13 +167,11 @@ git push --tags
 
 Finalmente se cumple el flujo completo y se tiene productivo el desarrollo de los requisitos para el MVP.
 
-> NOTA: Para proyectos empresariales, se establecen políticas y restricciones para evitar la integración directa por linea de comandos a la rama master, ya que como buena practica se requiere integrar por medio de un pull request para revisar y aprobar los cambios.
+> NOTA: Para proyectos empresariales, se establecen políticas y restricciones para evitar la integración directa por linea de comandos a la rama master y develop, este proceso se realiza por medio de un pull request para revisar y aprobar los cambios.
 
 # Autores ✒️
 
-
 * **John Alexander Cruz** - *Versión Inicial* - [jhonalexander0809](https://github.com/jhonalexander0809)
-
 
 # DevOps Professional 🚀
 
