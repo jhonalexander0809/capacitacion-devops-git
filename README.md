@@ -30,9 +30,9 @@ Un proyecto de desarrollo tiene como objetivo realizar un lanzamiento de su siti
 Configurar nombre y correo electrónico:
 
 ```sh
-$ git config --global user.name "Nombre"
-$ git config --global user.email correo@gmail.com
-$ git config --list
+git config --global user.name "Nombre"
+git config --global user.email correo@gmail.com
+git config --list
 ```
 **Crear un repositorio en GitHub llamado practica-devops**
 # Planeación y ejecución del flujo de trabajo
@@ -46,40 +46,40 @@ Se requiere llevar un control del código fuente con el modelo de gitflow, para 
 
 #### Clonar repositorio practica-devops
 ```sh
-$ git clone url_repo
+git clone url_repo
 ```
 #### Crear tag
 ```sh
-$ git tag v0.1
-$ git push --tags
+git tag v0.1
+git push --tags
 ```
 #### Crear rama develop
 ```sh
-$ git checkout -b develop
-$ git push origin develop
+git checkout -b develop
+git push origin develop
 ```
 #### Crear rama feature/body
 ```sh
-$ git checkout -b feature/body
+git checkout -b feature/body
 ```
 Agregar el contenido del archivo de texto **feature-body.txt** al archivo **index.html** debajo del **header** del html
 #### Commit y subir cambios a feature/body
 ```sh
-$ git add .
-$ git commit -m "Corrección de nombre"
-$ git push origin bugfix/nombre-sitio
+git add .
+git commit -m "Corrección de nombre"
+git push origin bugfix/nombre-sitio
 ```
 
 #### Crear rama feature/footer
 ```sh
-$ git checkout -b feature/footer
+git checkout -b feature/footer
 ```
 Agregar el contenido del archivo de texto del **feature-footer.txt** al archivo **index.html** debajo del **body** del html
 #### Commit y subir cambios a feature/footer
 ```sh
-$ git add .
-$ git commit -m "Corrección de nombre"
-$ git push origin feature/footer
+git add .
+git commit -m "Corrección de nombre"
+git push origin feature/footer
 ```
 ------
 Una vez completado el desarrollo de los requisitos del proyecto se debe integrar a las ramas en el siguiente orden para pasar por un flujo de pruebas y finalmente su lanzamiento:
@@ -92,20 +92,20 @@ Una vez completado el desarrollo de los requisitos del proyecto se debe integrar
             
 #### Integrar ramas feature a develop
 ```sh
-$ git checkout develop
-$ git merge feature/body
-$ git merge feature/footer
+git checkout develop
+git merge feature/body
+git merge feature/footer
 ```
 #### Eliminar ramas features
 ```sh
-$ git push origin --delete feature/body
-$ git push origin --delete feature/footer
+git push origin --delete feature/body
+git push origin --delete feature/footer
 ```
 #### Crear rama release y tag
 ```sh
-$ git checkout -b release/mvp
-$ git tag v1.0-alpha
-$ git push --tags
+git checkout -b release/mvp
+git tag v1.0-alpha
+git push --tags
 ```
 ------
 El equipo de pruebas encuentra un error en el ambiente de QA y debe cambiar el nombre del sitio web, el equipo de desarrollo debe solucionarlo aplicando el siguiente flujo:
@@ -118,8 +118,8 @@ El equipo de pruebas encuentra un error en el ambiente de QA y debe cambiar el n
             
 #### Crear bugfix
 ```sh
-$ git checkout release/mvp
-$ git checkout -b bugfix/nombre-sitio
+git checkout release/mvp
+git checkout -b bugfix/nombre-sitio
 ```
 #### Corregir bug
 Modificar el título en la siguiente sección del archivo index.html por **DevOps Professional**
@@ -132,42 +132,42 @@ Modificar el título en la siguiente sección del archivo index.html por **DevOp
 #### Commit y subir cambios
 
 ```sh
-$ git add .
-$ git commit -m "Corrección de nombre"
-$ git push origin bugfix/nombre-sitio
+git add .
+git commit -m "Corrección de nombre"
+git push origin bugfix/nombre-sitio
 ```
 
 #### Integrar a develop
 ```sh
-$ git checkout develop
-$ git merge bugfix/nombre-sitio
+git checkout develop
+git merge bugfix/nombre-sitio
 ```
 #### Integrar a release
 ```sh
-$ git checkout release/mvp
-$ git merge bugfix/nombre-sitio
+git checkout release/mvp
+git merge bugfix/nombre-sitio
 ```
 #### Eliminar bugfix
 ```sh
-$ git push origin --delete bugfix/nombre-sitio
+git push origin --delete bugfix/nombre-sitio
 ```
 #### Crear tag release
 ```sh
-$ git checkout release/mvp
-$ git tag v1.1-alpha
-$ git push --tags
+git checkout release/mvp
+git tag v1.1-alpha
+git push --tags
 ```
 #### Integrar a master y crear tag
 ```sh
-$ git checkout master
-$ git merge release/mvp
-$ git tag v1.1
-$ git push --tags
+git checkout master
+git merge release/mvp
+git tag v1.1
+git push --tags
 ```
 
 Finalmente se cumple el flujo completo y se tiene productivo el desarrollo de los requisitos para el MVP.
 
-> NOTA: Para proyectos empresariales, se establecen políticas y restricciones para evitar la integración directa por linea de comandos a la rama master, ya que como buena practica se requiere integrar por medio de un pull request para revisar y aprobar los cambios.
+> NOTA: Para proyectos empresariales, se establecen políticas y restricciones para evitar la integración directa por linea de comandos a la rama master, ya que como buena práctica se requiere integrar por medio de un pull request para revisar y aprobar los cambios.
 
 **DevOps Professional**
 
