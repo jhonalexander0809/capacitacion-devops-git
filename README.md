@@ -1,1 +1,145 @@
-# devops-professional-git
+# DevOps Professional - Módulo 3 Versionamiento de Código
+
+[![N|Solid](https://www.elempleo.com/sitios-empresariales/colombia/periferia-it-corp/img/logo-periferia-01.png)](https://periferiaitgroup.com/)
+
+Este repositorio tiene como objetivo generar una guía para el desarrollo de una práctica de versionamiento con github, aprender los comandos básicos y manejar la herramienta GitHub.
+
+# Requisitos
+
+  - Crear cuenta en [GitHub].
+  - Instalar el cliente de [Git] en el equipo local.
+  - Instalar un editor de texto como [Visual Studio Code]. (Puede usar bloc de notas)
+
+# Archivos
+Es necesario descargar este repositorio de forma local, para poder usar los archivos de ejemplo que representan los requisitos para integrar y ejecutar esta practica.
+| Archivo   |      Descripción      |
+|----------|:-------------:|
+| index.html |  Linea base, versión inicial del proyecto. |
+| feature-body.txt |  Archivo que contiene la solución del requisito del body, este se debe agregar en el archivo index.html de la rama del feature/body   |
+| feature-footer.txt | Archivo que contiene la solución del requisito del footer, este se debe agregar en el archivo index.html de la rama del feature/footer  |
+
+# Planteamiento
+
+Un proyecto de desarrollo tiene como objetivo realizar un lanzamiento de su sitio web, actualmente se encuentra en desarrollo y ya se tiene el header de la página, se tienen los dos siguientes requisitos para realizar el lanzamiento del producto mínimo viable (MVP).
+
+  - Desarrollo del body del sitio web.
+  - Desarrollo del footer del sitio web.
+
+# Configuración Inicial
+
+Configurar nombre y correo electrónico:
+
+```sh
+$ git config --global user.name "Nombre"
+$ git config --global user.email correo@gmail.com
+$ git config --list
+```
+
+# Planeación y ejecución del flujo de trabajo
+
+Se requiere llevar un control del código fuente con el modelo de gitflow, para lo cual se plantea la siguiente estructura inicial de branching:
+
+  - master -----> tag: v0.1
+     - develop
+        - feature/body
+        - feature/footer
+
+#### Clonar repositorio
+```sh
+$ git clone url_repo
+```
+#### Crear tag
+```sh
+$ git tag v0.1
+$ git push --tags
+```
+#### Crear rama develop
+```sh
+$ git checkout -b develop
+$ git push origin develop
+```
+#### Crear ramas feature
+```sh
+$ git checkout -b feature/body
+$ git push origin feature/body
+$ git checkout -b feature/footer
+$ git push origin feature/footer
+```
+------
+Una vez completado el desarrollo de los requisitos del proyecto se debe integrar a las ramas en el siguiente orden para pasar por un flujo de pruebas y finalmente su lanzamiento:
+> Eliminar ramas temporales feature una vez se integren.
+  - feature/body -----> delete
+  - feature/footer -----> delete
+     - develop
+        - release/mvp -----> tag: v1.0-alpha
+            - master -----> tag: v1.0 **(No integrar, continué al siguiente paso)**
+            
+#### Integrar ramas feature a develop
+```sh
+$ git checkout develop
+$ git merge feature/body
+$ git merge feature/footer
+```
+#### Eliminar ramas features
+```sh
+$ git push origin --delete feature/body
+$ git push origin --delete feature/footer
+```
+#### Crear rama release y tag
+```sh
+$ git checkout -b release/mvp
+$ git tag v1.0-alpha
+$ git push --tags
+```
+------
+El equipo de pruebas encuentra un error en el ambiente de QA y debe cambiar el nombre del sitio web, el equipo de desarrollo debe solucionarlo aplicando el siguiente flujo:
+> Eliminar ramas temporales bugfix y release/mpv una vez se integren en el flujo completo.
+  - release/mvp -----> tag: v1.0-alpha
+     - bugfix/nombre-sitio
+        - develop
+        - release/mvp -----> tag: v1.1-alpha
+            - master -----> tag: v1.1
+            
+#### Crear bugfix
+```sh
+$ git checkout release/mvp
+$ git checkout -b bugfix/nombre-sitio
+```
+#### Integrar a develop
+```sh
+$ git checkout develop
+$ git merge bugfix/nombre-sitio
+```
+#### Integrar a release
+```sh
+$ git checkout release/mvp
+$ git merge bugfix/nombre-sitio
+```
+#### Eliminar bugfix
+```sh
+$ git push origin --delete bugfix/nombre-sitio
+```
+#### Crear tag release
+```sh
+$ git checkout release/mvp
+$ git tag v1.1-alpha
+$ git push --tags
+```
+#### Integrar a master y crear tag
+```sh
+$ git checkout master
+$ git merge release/mvp
+$ git tag v1.1
+$ git push --tags
+```
+
+Finalmente se cumple el flujo completo y se tiene productivo el desarrollo de los requisitos para el MVP.
+
+> NOTA: Para proyectos empresariales, se establecen políticas y restricciones para evitar la integración directa por linea de comandos a la rama master, ya que como buena practica se requiere integrar por medio de un pull request para revisar y aprobar los cambios.
+
+**DevOps Professional**
+
+
+   [visual studio code]: <https://code.visualstudio.com>
+   [git]: <https://git-scm.com>
+   [github]: <https://github.com>
