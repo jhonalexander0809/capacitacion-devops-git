@@ -1,16 +1,16 @@
-# DevOps Professional - Módulo 3 Versionamiento de Código
+# DevOps Professional - Módulo 3 Versionamiento de Código 🚀
 
 [![N|Solid](https://www.elempleo.com/sitios-empresariales/colombia/periferia-it-corp/img/logo-periferia-01.png)](https://periferiaitgroup.com/)
 
 Este repositorio tiene como objetivo generar una guía para el desarrollo de una práctica de versionamiento con github, aprender los comandos básicos y manejar la herramienta GitHub.
 
-# Requisitos
+# Requisitos 🛠️
 
   - Crear cuenta en [GitHub].
   - Instalar el cliente de [Git] en el equipo local.
   - Instalar un editor de texto como [Visual Studio Code]. (Puede usar bloc de notas)
 
-# Archivos
+# Archivos 📋 
 Es necesario descargar este repositorio de forma local, para poder usar los archivos de ejemplo que representan los requisitos para integrar y ejecutar esta practica.
 | Archivo   |      Descripción      |
 |----------|:-------------:|
@@ -18,14 +18,14 @@ Es necesario descargar este repositorio de forma local, para poder usar los arch
 | feature-body.txt |  Archivo que contiene la solución del requisito del body, este se debe agregar en el archivo index.html de la rama del feature/body   |
 | feature-footer.txt | Archivo que contiene la solución del requisito del footer, este se debe agregar en el archivo index.html de la rama del feature/footer  |
 
-# Planteamiento
+# Planteamiento 📄
 
 Un proyecto de desarrollo tiene como objetivo realizar un lanzamiento de su sitio web, actualmente se encuentra en desarrollo y ya se tiene el header de la página, se tienen los dos siguientes requisitos para realizar el lanzamiento del producto mínimo viable (MVP).
 
   - Desarrollo del body del sitio web.
   - Desarrollo del footer del sitio web.
 
-# Configuración Inicial
+# Configuración Inicial ⚙️
 
 Configurar nombre y correo electrónico:
 
@@ -35,7 +35,7 @@ git config --global user.email correo@gmail.com
 git config --list
 ```
 **Crear un repositorio en GitHub llamado practica-devops**
-# Planeación y ejecución del flujo de trabajo
+# Planeación y ejecución del flujo de trabajo ⚙️
 
 Se requiere llevar un control del código fuente con el modelo de gitflow, para lo cual se plantea la siguiente estructura inicial de branching:
 
@@ -169,7 +169,13 @@ Finalmente se cumple el flujo completo y se tiene productivo el desarrollo de lo
 
 > NOTA: Para proyectos empresariales, se establecen políticas y restricciones para evitar la integración directa por linea de comandos a la rama master, ya que como buena practica se requiere integrar por medio de un pull request para revisar y aprobar los cambios.
 
-**DevOps Professional**
+# Autores ✒️
+
+
+* **John Alexander Cruz** - *Trabajo Inicial* - [jhonalexander0809](https://github.com/jhonalexander0809)
+
+
+# DevOps Professional 🚀
 
 
    [visual studio code]: <https://code.visualstudio.com>
