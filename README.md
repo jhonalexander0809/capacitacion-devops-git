@@ -172,7 +172,7 @@ Finalmente se cumple el flujo completo y se tiene productivo el desarrollo de lo
 # Autores ✒️
 
 
-* **John Alexander Cruz** - *Trabajo Inicial* - [jhonalexander0809](https://github.com/jhonalexander0809)
+* **John Alexander Cruz** - *Versión Inicial* - [jhonalexander0809](https://github.com/jhonalexander0809)
 
 
 # DevOps Professional 🚀
