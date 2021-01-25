@@ -1,4 +1,4 @@
-# DevOps Professional - Módulo 3 Versionamiento de Código 🚀
+# DevOps - Versionamiento de Código 🚀
 
 [![N|Solid](https://www.elempleo.com/sitios-empresariales/colombia/periferia-it-corp/img/logo-periferia-01.png)](https://periferiaitgroup.com/)
 
