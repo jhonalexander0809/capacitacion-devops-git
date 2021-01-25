@@ -50,6 +50,7 @@ git clone url_repo
 ```
 #### Crear tag
 ```sh
+git checkout main
 git tag v0.1
 git push --tags
 ```
