@@ -98,10 +98,16 @@ git checkout develop
 git merge feature/body
 git merge feature/footer
 ```
+#### Si genera error por el merge, resuelva el merge y luego ejecute los siguientes comandos para resolver.
+```sh
+git add .
+git commit -m "se resuelven conflictos de merge de feature a develop"
+```
 #### Eliminar ramas features remotamente
 ```sh
 git push origin --delete feature/body
 git push origin --delete feature/footer
+git push --set-upstream origin develop
 ```
 #### Eliminar ramas features localmente
 ```sh
