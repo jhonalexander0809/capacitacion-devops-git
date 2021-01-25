@@ -39,7 +39,7 @@ git config --list
 
 Se requiere llevar un control del código fuente con el modelo de gitflow, para lo cual se plantea la siguiente estructura inicial de branching:
 
-  - master -----> tag: v0.1
+  - main -----> tag: v0.1
      - develop
         - feature/body
         - feature/footer
@@ -88,8 +88,8 @@ Una vez completado el desarrollo de los requisitos del proyecto se debe integrar
   - feature/body -----> delete
   - feature/footer -----> delete
      - develop
-        - release/mvp -----> tag: v1.0-alpha
-            - master -----> tag: v1.0 **(No integrar, continué al siguiente paso)**
+        - release/mvp
+            - main -----> **(No integrar, continué al siguiente paso)**
             
 #### Integrar ramas feature a develop
 ```sh
@@ -107,11 +107,9 @@ git push origin --delete feature/footer
 git branch -d feature/body
 git branch -d feature/footer
 ```
-#### Crear rama release y tag
+#### Crear rama release
 ```sh
 git checkout -b release/mvp
-git tag v1.0-alpha
-git push --tags
 ```
 ------
 El equipo de pruebas encuentra un error en el ambiente de QA y debe cambiar el nombre del sitio web, el equipo de desarrollo debe solucionarlo aplicando el siguiente flujo:
@@ -119,8 +117,8 @@ El equipo de pruebas encuentra un error en el ambiente de QA y debe cambiar el n
   - release/mvp -----> tag: v1.0-alpha
      - bugfix/nombre-sitio
         - develop
-        - release/mvp -----> tag: v1.1-alpha
-            - master -----> tag: v1.1
+        - release/mvp -----> tag: v1.0-alpha
+            - main -----> tag: v1.0
             
 #### Crear bugfix
 ```sh
@@ -153,27 +151,31 @@ git merge bugfix/nombre-sitio
 git checkout release/mvp
 git merge bugfix/nombre-sitio
 ```
-#### Eliminar bugfix
+#### Eliminar bugfix remotamente
 ```sh
 git push origin --delete bugfix/nombre-sitio
+```
+#### Eliminar bugfix localmente
+```sh
+git branch -d bugfix/nombre-sitio
 ```
 #### Crear tag release
 ```sh
 git checkout release/mvp
-git tag v1.1-alpha
+git tag v1.0-alpha
 git push --tags
 ```
-#### Integrar a master y crear tag
+#### Integrar a main y crear tag
 ```sh
-git checkout master
+git checkout main
 git merge release/mvp
-git tag v1.1
+git tag v1.0
 git push --tags
 ```
 
 Finalmente se cumple el flujo completo y se tiene productivo el desarrollo de los requisitos para el MVP.
 
-> NOTA: Para proyectos empresariales, se establecen políticas y restricciones para evitar la integración directa por linea de comandos a la rama master y develop, este proceso se realiza por medio de un pull request para revisar y aprobar los cambios.
+> NOTA: Para proyectos empresariales, se establecen políticas y restricciones para evitar la integración directa por linea de comandos a la rama main y develop, este proceso se realiza por medio de un pull request para revisar y aprobar los cambios.
 
 # Autores ✒️
 
