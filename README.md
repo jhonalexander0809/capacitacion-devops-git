@@ -102,6 +102,7 @@ git merge feature/footer
 ```sh
 git add .
 git commit -m "se resuelven conflictos de merge de feature a develop"
+git push --set-upstream origin develop
 ```
 #### Eliminar ramas features remotamente
 ```sh
