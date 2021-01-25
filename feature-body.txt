@@ -13,4 +13,4 @@
     <p>Sin el riesgo de que los desarrolladores individuales verificaren cambios que podrían desestabilizar el trabajo o incluso de introducir errores en el TRUNK (o maestro o mainline).</p>
   </article>
  </section>
-</div>
+</div> 
