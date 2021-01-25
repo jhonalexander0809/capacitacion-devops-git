@@ -108,7 +108,6 @@ git push --set-upstream origin develop
 ```sh
 git push origin --delete feature/body
 git push origin --delete feature/footer
-git push --set-upstream origin develop
 ```
 #### Eliminar ramas features localmente
 ```sh
