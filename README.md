@@ -98,7 +98,7 @@ git checkout develop
 git merge feature/body
 git merge feature/footer
 ```
-#### Si genera error por el merge, resuelva el merge y luego ejecute los siguientes comandos para resolver.
+#### Si genera error por el merge, resuelva el merge y luego ejecute los siguientes comandos integrar a develop
 ```sh
 git add .
 git commit -m "se resuelven conflictos de merge de feature a develop"
