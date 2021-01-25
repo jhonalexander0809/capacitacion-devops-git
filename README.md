@@ -72,6 +72,7 @@ git push origin feature/body
 
 #### Crear rama feature/footer
 ```sh
+git checkout develop
 git checkout -b feature/footer
 ```
 Agregar el contenido del archivo de texto del **feature-footer.txt** al archivo **index.html** debajo del **body** del html
