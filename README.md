@@ -97,10 +97,15 @@ git checkout develop
 git merge feature/body
 git merge feature/footer
 ```
-#### Eliminar ramas features
+#### Eliminar ramas features remotamente
 ```sh
 git push origin --delete feature/body
 git push origin --delete feature/footer
+```
+#### Eliminar ramas features localmente
+```sh
+git branch -d feature/body
+git branch -d feature/footer
 ```
 #### Crear rama release y tag
 ```sh
